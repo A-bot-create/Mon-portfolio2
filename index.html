@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ben Mathe | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <nav id="navMenu">
+    <a href="bio.html">À propos</a>
+    <a href="experiences.html">Expériences</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="container">
+    <div class="left">
+      <p>PORTFOLIO</p>
+      <h1>BEN<br />MATHE</h1>
+      <p>Étudiant L1 LMD FASI et passionné de la programmation</p>
+      <a href="bio.html">EMAIL ME</a>
+    </div>
+    <div class="right"></div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navMenu').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

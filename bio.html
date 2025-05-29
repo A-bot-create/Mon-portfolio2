@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ben Mathe | Bio</title>
+  <link rel="stylesheet" href="style.css">
+
+<body>
+     <header class="navbar">
+    <!-- Burger à gauche -->
+    <button class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="logo">BM🎓</div>
+
+    <!-- Menu latéral caché -->
+    <nav class="side-menu" id="sideMenu">
+      <a href="index.html">Menu🧔🏽</a>
+      <a href="experiences.html">Expériences</a>
+      <a href="contact.html">Contact📲</a>
+    </nav>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+  </header>
+
+
+  <div class="container">
+    <div class="bio-section">
+      <h2>À propos de moi</h2>
+      <p>
+        Je m'appelle <strong>Ben Mathe</strong>, étudiant en première année du programme L1 LMD à la FASI. Depuis toujours, je suis fasciné par la technologie et tout particulièrement par le monde de la programmation. Ce qui a commencé comme une simple curiosité est vite devenu une véritable passion. J'aime comprendre le fonctionnement des systèmes, créer des applications utiles et résoudre des problèmes complexes à l'aide du code.
+      </p>
+      <p>
+        Mon parcours scolaire m’a permis d’acquérir des bases solides en algorithmique, en logique informatique ainsi qu’en développement web. J’accorde aussi une grande importance à l’apprentissage autodidacte et je consacre beaucoup de temps à explorer de nouvelles technologies, langages et frameworks.
+      </p>
+      <p>
+        En dehors de la programmation, j’ai un intérêt pour le design numérique, l’innovation technologique, la lecture et les jeux de stratégie. Je suis une personne motivée, curieuse et toujours prête à relever de nouveaux défis pour progresser dans ce domaine passionnant.
+      </p>
+    </div>
+  </div>
+
+  <!-- Script pour menu burger -->
+  <script>
+    const burger = document.getElementById('burger');
+    const sideMenu = document.getElementById('sideMenu');
+    const overlay = document.getElementById('overlay');
+
+    burger.addEventListener('click', () => {
+      sideMenu.classList.toggle('active');
+      overlay.classList.toggle('active');
+      burger.classList.toggle('open');
+    });
+
+    overlay.addEventListener('click', () => {
+      sideMenu.classList.remove('active');
+      overlay.classList.remove('active');
+      burger.classList.remove('open');
+    });
+  </script>
+
+</body>
+</html>

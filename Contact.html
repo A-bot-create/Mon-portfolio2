@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ben Mathe | Contact📲</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+    <!-- Burger à gauche -->
+    <button class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="logo">BM🎓</div>
+
+    <!-- Menu latéral caché -->
+    <nav class="side-menu" id="sideMenu">
+      <a href="index.html">Accueil🏠</a>
+      <a href="bio.html">Moi🧔🏽</a>
+      <a href="experiences.html">Expériences</a>
+    </nav>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+  </header>
+
+  <div class="container">
+    <div class="contact-info">
+      <h2>Me contacter</h2>
+      <ul>
+        <li>Email : <a href="mailto:benmathe@email.com">benmathe@email.com</a></li>
+        <li>Téléphone : <a href="tel:+221771234567">+221 77 123 45 67</a></li>
+        <li>LinkedIn : <a href="https://www.linkedin.com/in/benmathe" target="_blank">linkedin.com/in/benmathe</a></li>
+        <li>GitHub : <a href="https://github.com/benmathe" target="_blank">github.com/benmathe</a></li>
+      </ul>
+    </div>
+  </div>
+
+   <!-- Script pour menu burger -->
+  <script>
+    const burger = document.getElementById('burger');
+    const sideMenu = document.getElementById('sideMenu');
+    const overlay = document.getElementById('overlay');
+
+    burger.addEventListener('click', () => {
+      sideMenu.classList.toggle('active');
+      overlay.classList.toggle('active');
+      burger.classList.toggle('open');
+    });
+
+    overlay.addEventListener('click', () => {
+      sideMenu.classList.remove('active');
+      overlay.classList.remove('active');
+      burger.classList.remove('open');
+    });
+  </script>
+</body>
+</html>

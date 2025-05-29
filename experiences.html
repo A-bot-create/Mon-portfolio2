@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ben Mathe | Expériences</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+     .bio-section {
+      flex: 1;
+      padding: 2rem;
+      background-color: #f6f6f6;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .bio-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .bio-section p {
+      max-width: 600px;
+      font-size: 1rem;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+     .experience-section {
+      flex: 1;
+      padding: 2rem;
+      background-color: #f6f6f6;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .experience-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .experience {
+      max-width: 700px;
+      margin-bottom: 1.5rem;
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .experience h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .experience p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      text-align: justify;
+    }
+</style>
+<body>
+  <header class="navbar">
+    <!-- Burger à gauche -->
+    <button class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="logo">BM🎓</div>
+
+    <!-- Menu latéral caché -->
+    <nav class="side-menu" id="sideMenu">
+      <a href="index.html">Accueil🏠</a>
+      <a href="bio.html">Moi🧔🏽</a>
+      <a href="contact.html">Contact📲</a>
+    </nav>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+  </header>
+
+  <div class="container">
+    <div class="experience-section">
+      <h2>Mes Expériences</h2>
+
+      <div class="experience">
+        <h3>Développement d’un mini-site web personnel</h3>
+        <p>Création d’un mini-site web statique en HTML/CSS pour me présenter, comme celui que vous consultez actuellement. Ce projet m’a permis de comprendre les fondements du responsive design et de l’interaction utilisateur simple.</p>
+      </div>
+
+      <div class="experience">
+        <h3>Participation à un Hackathon scolaire</h3>
+        <p>En équipe, nous avons imaginé une application mobile destinée à faciliter la gestion des emplois du temps pour les étudiants. J’étais responsable de la maquette et des premiers prototypes interactifs.</p>
+      </div>
+
+      <div class="experience">
+        <h3>Projet d'automatisation avec Python</h3>
+        <p>J’ai travaillé sur un petit script Python capable de renommer et trier automatiquement des fichiers dans un dossier, ce qui m’a permis d’approfondir la manipulation des fichiers et l’usage des bibliothèques standard.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Script pour menu burger -->
+  <script>
+    const burger = document.getElementById('burger');
+    const sideMenu = document.getElementById('sideMenu');
+    const overlay = document.getElementById('overlay');
+
+    burger.addEventListener('click', () => {
+      sideMenu.classList.toggle('active');
+      overlay.classList.toggle('active');
+      burger.classList.toggle('open');
+    });
+
+    overlay.addEventListener('click', () => {
+      sideMenu.classList.remove('active');
+      overlay.classList.remove('active');
+      burger.classList.remove('open');
+    });
+  </script>
+</body>
+</html>
