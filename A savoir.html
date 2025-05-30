@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ben Mathe | À savoir</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+   <header class="navbar">
+    <!-- Burger à gauche -->
+    <button class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="logo">BM🎓</div>
+
+    <!-- Menu latéral caché -->
+    <nav class="side-menu" id="sideMenu">
+      <a href="index.html">Accueil🏠</a>
+      <a href="bio.html">Moi🧔🏽</a>
+      <a href="experiences.html">Expériences💼</a>
+      <a href="contact.html">Contact📲</a>
+      <a href="Projet.html">Projet🛠️</a>
+     
+    </nav>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+  </header>
+    <div class="bio-text">
+      <h2>À Savoir</h2>
+      <p>
+        Cette section est dédiée à des informations importantes que vous devez connaître.
+      </p>
+      <p>
+        Voici quelques points clés à retenir :
+      </p>
+      <ul>
+        <li>1: J'ai travailler sur mon portfolio dans une periode de 2 semaine avec des decalages de 2 jours par semains donc sur un intervalle de deux donc 4jours par semaines</li>
+        <li>2: J'ai utilisé des outils modernes tels que HTML, CSS et JavaScript pour créer un design responsive.</li>
+        <li>3: J'ai appris à intégrer le bouton en burger pour enrichier quelques fonctionnalités de mon site et cela rends un effet de souplesse et d'agiliter sur ma page et cela grace aux enseignements recus de l'assistant Vala avec son projet github de moni shop.</li>
+      </ul>
+
+       <!-- Script pour menu burger -->
+  <script>
+    const burger = document.getElementById('burger');
+    const sideMenu = document.getElementById('sideMenu');
+    const overlay = document.getElementById('overlay');
+
+    burger.addEventListener('click', () => {
+      sideMenu.classList.toggle('active');
+      overlay.classList.toggle('active');
+      burger.classList.toggle('open');
+    });
+
+    overlay.addEventListener('click', () => {
+      sideMenu.classList.remove('active');
+      overlay.classList.remove('active');
+      burger.classList.remove('open');
+    });
+  </script>
+    </div>
+  </div>
+</body>
+</html>
